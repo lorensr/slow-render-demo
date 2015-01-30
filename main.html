@@ -1,0 +1,25 @@
+<body>
+  {{> index}}
+</body>
+
+<template name="index">
+  <a href="#" id="switch">Switch template</a>
+  {{#if showSmall}}
+  {{> small}}
+  {{else}}
+  {{> large}}
+  {{/if}}
+</template>
+
+<template name="small">
+  Small template
+</template>
+
+<template name="large">
+  Large template
+  {{#each nums}}
+  <div>
+    {{this}}
+  </div>
+  {{/each}}
+</template>
